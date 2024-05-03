@@ -38,16 +38,17 @@ _Description_: I have used the below github templates to create my .gitignore fi
 
 ## Use of this Project
 
-This project may be useful to prospective students of the HDip in Science in Computing in Data Analytics course at ATU Galway, giving an indication of the content of the Programming and Scripting moduule and showcasing what can be achieved within three months on the course. It may also be useful to other Python learners beginning their Data Analytics journey.
+This project may be useful to prospective students of the HDip in Science in Computing in Data Analytics course at ATU Galway, giving an indication of the content of the Programming and Scripting moduule and showcasing what can be achieved within three months of the course. It may also be useful to other Python learners beginning their Data Analytics journey.
 
 ## Get Started 
 
 You can jump straight to the notebook using the following clickable link, which was generated using [openincolab.com/](https://openincolab.com/)
 
-This opens the `penguins.ipynb` notebook in [Google Colab](https://colab.research.google.com/).
+This opens the `iris.ipynb` notebook in [Google Colab](https://colab.research.google.com/).
 
-<a target="_blank" href="https://colab.research.google.com/github/fdennehy/pda-project/blob/main/penguins.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/fdennehy/pands-project/blob/main/iris.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 To run the files locally, clone the repository and then run the python files locally.
 
