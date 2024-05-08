@@ -2,11 +2,21 @@
 
 ## About This Project
 
-This repository contains a Python program (analysis.py) which explores the well-known Fisher's Iris data set using analytical methods learned as part of the Programming and Scripting module of the [HDip in Science in Computing in Data Analytics](https://www.gmit.ie/higher-diploma-in-science-in-computing-in-data-analytics), ATU Galway. In addition to the Python program, the repository contains this README.md file, a Jupyter Notebook (iris.ipynb) and a .gitignore file. A brief description of each file is provided under the 'Files Description' section.
+This repository contains a Python program (analysis.py) which explores the well-known Fisher's Iris data set using analytical methods learned as part of the Programming and Scripting module of the [HDip in Science in Computing in Data Analytics](https://www.gmit.ie/higher-diploma-in-science-in-computing-in-data-analytics), ATU Galway. In addition to the Python program, the repository contains this README.md file, a Jupyter Notebook (iris.ipynb), an iris_species.png file and a .gitignore file. A brief description of each file is provided under the 'Files Description' section.
 
 ## Fisher's Iris Data Set
 
-Placeholder: Insert research of Irish Data Set here
+[Fisher's Iris Data Set](https://en.wikipedia.org/wiki/Iris_flower_data_set) is a set of data collected by [Edgar Anderson](https://en.wikipedia.org/wiki/Edgar_Anderson), and subsequently made famous by [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) "in his 1936 paper _The use of multiple measurements in taxonomic problems_ as an example of linear discriminant analysis". The data set contains 150 records of Iris flowers (50 records for each of the three Iris species recorded) and each record has five attributes:
+- _Sepal length_
+- _Sepal width_
+- _Petal length_
+- _Petal width_
+- _Species_
+
+![iris_species.png](Iris_species.png)
+Source: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nfK3vGZkTa4GrO7yWpcS-Q.png
+
+Due to its simplicity, standardization and versatility, this data set has become popular for testing machine learning techniques, particularly classifaction techniques such as [support vector machines](https://en.wikipedia.org/wiki/Support_vector_machine) and [k-nearest neighbours (KNN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
 
 ## Files Description
 
@@ -35,6 +45,9 @@ _Description_: I have used the below github templates to create my .gitignore fi
     https://github.com/github/gitignore/blob/main/Python.gitignore \
     https://github.com/github/gitignore/blob/main/Global/Windows.gitignore \
     https://github.com/github/gitignore/blob/main/Global/macOS.gitignore \
+
+5. **.iris_species.png**\
+_Description_: An image to help visualise the different measurements within the data set.
 
 ## Use of this Project
 
