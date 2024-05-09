@@ -44,7 +44,7 @@ _Description_: This README has been written with [GitHub's documentation on READ
 _Description_: I have used the below github templates to create my .gitignore file:\
     https://github.com/github/gitignore/blob/main/Python.gitignore \
     https://github.com/github/gitignore/blob/main/Global/Windows.gitignore \
-    https://github.com/github/gitignore/blob/main/Global/macOS.gitignore \
+    https://github.com/github/gitignore/blob/main/Global/macOS.gitignore 
 
 5. **.iris_species.png**\
 _Description_: An image to help visualise the different measurements within the data set.
