@@ -11,7 +11,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/
 df.to_csv('iris.csv')
 
 # https://note.nkmk.me/en/python-pandas-agg-aggregate/
-print(df.select_dtypes(include='number').agg(['mean', 'median', 'mode', 'kurtosis']))
+#print(df.select_dtypes(include='number').agg
 
 # Describe the data set and print the output to 'variable_summary.csv'
 # https://practicaldatascience.co.uk/data-science/how-to-create-descriptive-statistics-using-the-pandas-describe-function
