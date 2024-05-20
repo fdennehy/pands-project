@@ -15,6 +15,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 # Create a pandas DataFrame from the iris.csv file (sourced from the Seaborn Repository linked above) and save a local copy.
 df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 df.to_csv('iris.csv')
+print(df)
 df.info()
 
 
@@ -27,8 +28,14 @@ y = df.select_dtypes(object)
 
 # Generate descriptive statistics for the Iris categorical column 'species'.
 y_stats = y.describe().T
+print(y_stats)
+
 y_counts = y.value_counts()
+print(y_counts)
+
+# Update single value of the cat_info DataFrame via integer position, and transpose for ease of reading.
 y_stats.iat[0,2] = 'setosa, versicolor, virginica'
+print(y_stats)
 
 # Write summary of species vaeriable to csv file.
 with open("variable_summary.csv", "w") as f:
@@ -36,10 +43,23 @@ with open("variable_summary.csv", "w") as f:
 y_stats.to_csv('variable_summary.csv', mode='a')
 
 # Generate descriptive statistics for the Iris numerical columns.
+
+print(X.describe())
+
+# Let's customize the stats on display 
 X_stats = X.agg(['min', 'mean', 'median', 'std', 'max', 'skew', 'kurtosis']).T
+print(X_stats)
+
+# Create two new series, calculated from the existing 'mean' and 'std' series,  and add them to our X_stats DataFrame
 X_stats['mean+3*std'] = X_stats['mean'] + X_stats['std'].mul(3)
 X_stats['mean-3*std'] = X_stats['mean'] - X_stats['std'].mul(3)
+print(X_stats)
+
+# Re-oder the above Dataframe for ease of reading
 X_stats = X_stats.reindex(columns=['mean-3*std', 'min', 'mean', 'median', 'max', 'mean+3*std', 'skew', 'kurtosis'])
+
+# Check how many outliers are present in sepal width
+X['sepal_width'].sort_values(ascending=False)
 
 #  Write summary of species vaeriable to csv file.
 with open("variable_summary.csv", "a") as f:
@@ -253,7 +273,7 @@ plt.savefig('Iris_Scatterplots_3D.png')
 
 
 corr = df.corr(numeric_only=True)
-sns.heatmap(corr, annot=True, vmin=-1, vmax=1, cmap='coolwarm')
+###sns.heatmap(corr, annot=True, vmin=-1, vmax=1, cmap='coolwarm')### This line throws an error for me, but works from my Jupyter Notebook.
 df.groupby('species').corr(numeric_only=True)
 
 
@@ -282,7 +302,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y['target'], test_size=0.
 # Logistic Regression Implementation
 log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
-log_reg.score(X_test, y_test)
+print(log_reg.score(X_test, y_test))
 
 predictions = log_reg.predict(X_test)
-pd.DataFrame(confusion_matrix(y_test, predictions, labels=[0, 1, 2]),index=[0, 1, 2], columns=[0, 1, 2])
+confusion = pd.DataFrame(confusion_matrix(y_test, predictions, labels=[0, 1, 2]),index=[0, 1, 2], columns=[0, 1, 2])
+print(confusion)
